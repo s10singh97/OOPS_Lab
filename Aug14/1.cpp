@@ -5,11 +5,11 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     void swap(int&, int&);
-    cout<<"Enter two numbers";
+    cout<<"Enter two numbers\n";
     int a, b;
     cin>>a>>b;
     swap(a, b);
-    cout<<a<<b;
+    cout<<"Swapped numbers are : "<<a<<"\t"<<b;
     return 0;
 }
 
