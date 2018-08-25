@@ -90,6 +90,9 @@ int main(int argc, char const *argv[])
             case 5: cout<<"Exit from Program Control\n";
                     a = false;
                     break;
+            default:cout<<"Exit from Program Control\n";
+                    a = false;
+                    break;
         }
     }
     return 0;
