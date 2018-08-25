@@ -1,5 +1,7 @@
 #include<iostream>
+#define n 5
 using namespace std;
+
 class BankAccount
 {
     string name;
@@ -36,7 +38,7 @@ void BankAccount::display()
 
 int main(int argc, char const *argv[])
 {
-    BankAccount c[2];
+    BankAccount c[n];
     bool a = true;
     while(a)
     {
@@ -49,11 +51,11 @@ int main(int argc, char const *argv[])
         cin>>i;
         switch(i)
         {
-            case 1: for(j = 0; j < 2; j++)
+            case 1: for(j = 0; j < n; j++)
                         c[j].init();
                     break;
             case 2: cout<<"\n\t\"Details\"\n";
-                    for(j = 0; j < 2; j++)
+                    for(j = 0; j < n; j++)
                         c[j].display();
                     break;
             case 3: cout<<"Exit from Program Control\n";
