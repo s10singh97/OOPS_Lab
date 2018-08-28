@@ -1,8 +1,6 @@
 // Employee Class
 
 #include<iostream>
-#include<string>
-//#include<stdio.h>
 using namespace std;
 class Employee
 {
@@ -15,6 +13,7 @@ class Employee
     void getDetails();
     void computeSalary();
     void showDetails();
+    int promotionStats();
 };
 void Employee::getDetails()
 {
@@ -35,11 +34,23 @@ void Employee::showDetails()
     cout<<"\nPosition of employee is : "<<pos;
     cout<<"\nSalary is : "<<salary;
 }
+int Employee::promotionStats()
+{
+    if (profit > min_wage)
+        return 1;
+    else
+        return 0;
+}
 int main(int argc, char const *argv[])
 {
     Employee e;
     e.getDetails();
     e.computeSalary();
     e.showDetails();
+    int i = e.promotionStats();
+    if(i == 1)
+        cout<<"Will be promoted\n";
+    else
+        cout<<"Will not be promoted\n";
     return 0;
 }
