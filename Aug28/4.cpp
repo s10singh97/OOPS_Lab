@@ -1,4 +1,4 @@
-//Call by value
+//Calling by 3 different methods
 
 #include<iostream>
 using namespace std;
