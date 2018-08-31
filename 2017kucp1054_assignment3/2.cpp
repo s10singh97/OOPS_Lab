@@ -3,7 +3,7 @@ using namespace std;
 
 class Addition
 {
-    int a, b;
+    int a, b, sum;
     public:
     friend int add(int, int);
 };
@@ -13,8 +13,8 @@ int add(int p, int q)
     Addition ob;
     ob.a = p;
     ob.b = q;
-    int result = ob.a + ob.b;
-    return result;
+    ob.sum = ob.a + ob.b;
+    return ob.sum;
 }
 
 int main(int argc, char const *argv[])
