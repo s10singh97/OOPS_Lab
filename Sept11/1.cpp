@@ -7,12 +7,12 @@ int main(int argc, char const *argv[])
     char* a;
     cin.get(a, 10, ' ');
     cout<<a<<"\n";
-    char* b;
+    char b[10];
     cin.getline(b, 10, '\t');
     cout<<b<<"\n";
-    char* c;
-    cin.ignore(' ');
-    cout<<c;
+    // char* c;
+    // cin.ignore(' ');
+    // cout<<c;
     int i;
     for (i = 0; a[i] != '\0'; i++);
     int len = i;
