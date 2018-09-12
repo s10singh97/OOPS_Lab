@@ -12,6 +12,7 @@ void fileLines(int n, string file)
         cout<<"Unable to Open File\n"<<endl;
         exit(1);
     }
+    int c = 0;
     while(n)
     {
         getline(ifs, a);
@@ -24,7 +25,7 @@ int main(int argc, char const *argv[])
 {
     string a;
     int n;
-    cout<<"Enter the name of the file";
+    cout<<"Enter the name of the file: ";
     cin>>a;
     cout<<"Enter number of Lines\n";
     cin>>n;
