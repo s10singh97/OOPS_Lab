@@ -15,12 +15,12 @@ void read_from_two_files()
         if(ifs1)
         {
             getline(ifs1, a);
-            cout<<a;
+            cout<<a<<"\n";
         }
         if(ifs2)
         {
             getline(ifs2, b);
-            cout<<b;
+            cout<<b<<"\n";
         }
         if(!ifs1 && !ifs2)
             break;
