@@ -1,29 +1,24 @@
-// Crating object of a Class using private constructor
+// Creating object using Private Constructor
 
 #include<iostream>
 using namespace std;
 
-class Parent
+class Test
 {
-    Parent()
+    Test()
     {
-        cout<<"Constructor of Parent Class called\n";
+        cout<<"Object Using Private Constructor created\n";
     }
-    friend class Base;
-};
-
-class Base
-{
     public:
-    Base()
+    Test * getObject()
     {
-        Parent p1;
-        cout<<"Constructor of Base class called\n";
+        return (new Test);
     }
 };
 
 int main(int argc, char const *argv[])
 {
-    Base b1;  
+    Test *ob1 = NULL;
+    ob1 = ob1 -> getObject();
     return 0;
 }
