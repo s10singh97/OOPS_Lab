@@ -12,7 +12,7 @@ void one_instruction_write(ifstream &ifs, ofstream &ofs)
 int main(int argc, char const *argv[])
 {
     ifstream ifs;
-    ifs.open("fread.txt");
+    ifs.open(__FILE__);
     ofstream ofs;
     ofs.open("fwrite.txt");
     one_instruction_write(ifs, ofs);
