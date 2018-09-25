@@ -6,24 +6,39 @@ using namespace std;
 
 void report(fstream &file)
 {
-    cout<<file.rdstate()<<"\n";
-    cout<<file.good()<<"\n";
-    cout<<file.fail()<<"\n";
-    cout<<file.bad()<<"\n";
-    cout<<file.eof()<<"\n";
+    cout<<"rdstate: "<<file.rdstate()<<"\n";
+    cout<<"good: "<<file.good()<<"\n";
+    cout<<"fail: "<<file.fail()<<"\n";
+    cout<<"bad: "<<file.bad()<<"\n";
+    cout<<"eof: "<<file.eof()<<"\n";
     char c;
     while(file)
     {
         file.read((char*)&c, sizeof(c));
-        cout<<c;
+        // cout<<c;
     }
-    cout<<"\n"<<file.eof()<<"\n";
+    cout<<"eof: "<<file.eof()<<"\n";
+}
+
+class A
+{
+    public:
+    int data;
+    float dd;
+};
+
+void check_bad_bit(fstream &file, A &a1)
+{
+    file.read((char*)&a1, sizeof(a1));
+    cout<<"bad: "<<file.bad();
 }
 
 int main(int argc, char const *argv[])
 {
     fstream fs;
-    fs.open("fread.txt", ios::in|ios::binary);
-    report(fs);   
+    fs.open(__FILE__, ios::in);
+    report(fs);
+    A a1;   
+    check_bad_bit(fs, a1);
     return 0;
 }
