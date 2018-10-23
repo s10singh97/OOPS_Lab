@@ -13,7 +13,7 @@ class A
     }
     A()
     {
-        a = 0;
+        a = 0; b = 0;
     }
     operator int()          //Using conversion function
     {
