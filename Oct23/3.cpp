@@ -21,7 +21,11 @@ class Rectangle
     public:
     Rectangle()
     {
-        x = 4; y = 4;
+        x = 0; y = 0;
+    }
+    void setValues(float a, float b)
+    {
+        x = a; y = b;
     }
     operator Polar()            //Using Conversion Function
     {
@@ -30,13 +34,26 @@ class Rectangle
         temp.theta = atan(y/x);
         return temp;
     }
+    Rectangle(Polar &p)         //Using Copy Constructor
+    {
+        x = p.r*cos(p.theta);
+        y = p.r*sin(p.theta);
+    }
+    void display()
+    {
+        cout<<"\nx: "<<x;
+        cout<<"\ny: "<<y;
+    }
 };
 
 int main(int argc, char const *argv[])
 {
     Polar p1;
     Rectangle p2;
+    p2.setValues(4, 4);
     p1 = p2;
     p1.display();
+    p2 = p1;
+    p2.display();
     return 0;
 }
