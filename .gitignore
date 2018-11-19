@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
+*.class
 
 # Zip files
 *.zip
